@@ -59,8 +59,4 @@ Mesure de la qualité de débruitage à l'aide de métriques standards — **PSN
 - **SSIM** *(Structural Similarity Index)* : évalue la similarité perçue par l'œil humain en tenant compte des textures, des contrastes et de la luminosité.
 - **MSE** *(Mean Squared Error)* : erreur quadratique moyenne entre l'image prédite et l'image originale.
 
----
 
-## 👤 Auteur
-
-Projet réalisé dans le cadre d'un apprentissage pratique du deep learning appliqué à la restauration d'images.
