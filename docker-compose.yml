@@ -1,0 +1,26 @@
+services:
+  image-denoising:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - denoising-models:/app/models
+    environment:
+      - HF_TOKEN=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   # passed from host env — see setup commands
+      - USE_CUDA=0             # set to 1 if you have an NVIDIA GPU
+    restart: unless-stopped
+
+    # ── NVIDIA GPU (optional) ──────────────────────────────────────────────────
+    # Uncomment the three lines below AND set USE_CUDA=1 above if you have
+    # an NVIDIA GPU + nvidia-container-toolkit installed on your host:
+    #
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+volumes:
+  denoising-models:
