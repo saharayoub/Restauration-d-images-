@@ -7,7 +7,7 @@ import { ResultPanel } from "@/components/ResultPanel";
 import { useDenoise } from "@/hooks/useDenoise";
 
 export default function App() {
-  const { status, result, error, psnr, ssim, processingTime, denoise, reset } = useDenoise();
+  const { status, result, psnr, ssim, processingTime, denoise } = useDenoise();
   const isDone  = status === "completed";
   const isError = status === "error";
 
